@@ -29,7 +29,6 @@ function Home() {
           alt="Landscape picture"
           height={500}
           width={500}
-          className="transition-transform duration-300 hover:scale-105"
         />
         
         {/* Speech Bubble that follows mouse */}

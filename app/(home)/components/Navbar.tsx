@@ -28,15 +28,15 @@ export default function Navbar({className}:{className?:string}){
 
     const links = [
         {
-            href: "/",
+            href: "#home",
             label: "Home"
         },
-                {
-            href: "/about",
-            label: "About"
+        {
+            href: "#experience",
+            label: "Experience"
         },
         {
-            href: "/projects",
+            href: "#projects",
             label: "Projects"
         },
         {
@@ -53,21 +53,44 @@ export default function Navbar({className}:{className?:string}){
 
     return (
         <>
-            <nav className={cn("w-full py-4 px-6 fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/20 animate-move-down", className)}>
+            <nav className={cn("w-full py-4 px-6 fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/20", className)}>
               <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
                 <h1 className="text-2xl font-bold">vanessa lai ❀</h1>
                 
                 {/* Desktop Navigation Links */}
                 <div className="hidden md:flex items-center gap-8">
-                  {links.map((link, index) => (
-                    <Link 
-                      key={index} 
-                      href={link.href}
-                      className="text-gray-900 hover:text-purple-300 transition-colors duration-200 font-bold"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                  {links.map((link, index) => {
+                    if (link.href.startsWith('#')) {
+                      // Smooth scroll for anchor links
+                      return (
+                        <a 
+                          key={index} 
+                          href={link.href}
+                          className="text-gray-900 hover:text-purple-300 transition-colors duration-200 font-bold"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.querySelector(link.href);
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                        >
+                          {link.label}
+                        </a>
+                      );
+                    } else {
+                      // Regular Link navigation for external pages
+                      return (
+                        <Link 
+                          key={index} 
+                          href={link.href}
+                          className="text-gray-900 hover:text-purple-300 transition-colors duration-200 font-bold"
+                        >
+                          {link.label}
+                        </Link>
+                      );
+                    }
+                  })}
                 </div>
                 
                 {/* Desktop Social Icons */}
