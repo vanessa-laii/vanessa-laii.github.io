@@ -41,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl underline underline-offset-8 decoration-purple-200">
           A brief overview of my journey
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-lg">
+        <p className="text-neutral-700 dark:text-neutral-300 text-base md:text-lg max-w-lg">
           Currently Software Engineering Intern at RBC on the Innovation & Technology DevOps Team. Looking to pursue summer 2026 internships as a Full Stack Developer.
         </p>
       </div>

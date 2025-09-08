@@ -29,7 +29,7 @@ const Page = () => {
             </div>
             
             <div className="md:col-span-1">
-              <p className="font-semibold text-neutral-800 dark:text-neutral-200">To</p>
+              <p className="font-semibold text-neutral-800 dark:text-neutral-200">Responsibilities</p>
             </div>
             <div className="md:col-span-3">
               <p className="text-neutral-800 dark:text-neutral-200">Implement Site Reliability Practices for 30+ services across RBC&apos;s platform to ensure complete and healthy systems. Improve developer productivity by automating workflows, enhancing observability and reducing debugging time.</p>
@@ -40,13 +40,13 @@ const Page = () => {
             </div>
             <div className="md:col-span-3">
               <div className="space-y-2 font-semibold">
-                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-base dark:text-neutral-300">
                   ✅ Automated architecture diagrams for microservices and hosts & processes from Dynatrace data.
                 </div>
-                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-base dark:text-neutral-300">
                   ✅ Synthetic Pipelines to monitor the health of RBC&apos;s tools and house CI/CD platform.
                 </div>
-                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-base dark:text-neutral-300">
                   ✅ GitHub Health Check Reports to review high usage and pulling frequencies across all lines of businesses.
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Page = () => {
               </div>
               
               <div className="md:col-span-1">
-                <p className="font-semibold text-neutral-800 dark:text-neutral-200">To</p>
+                <p className="font-semibold text-neutral-800 dark:text-neutral-200">Responsibilities</p>
               </div>
               <div className="md:col-span-3">
                 <p className="text-neutral-800 dark:text-neutral-200">Collaborate with researchers to develop a wiki page winning Silver award in the overgrad category in Paris, France.</p>
@@ -86,10 +86,10 @@ const Page = () => {
               </div>
               <div className="md:col-span-3">
                 <div className="space-y-2 font-semibold">
-                  <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                  <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-base dark:text-neutral-300">
                     ✅ Personal website to showcase the team&apos;s research and achievements, and develop the personal branding
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+                  <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-base dark:text-neutral-300">
                     ✅ 2024 Wiki page to document research of multiple subteams 
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const Page = () => {
               </div>
               
               <div className="md:col-span-1">
-                <p className="font-semibold text-neutral-800 dark:text-neutral-200">To</p>
+                <p className="font-semibold text-neutral-800 dark:text-neutral-200">Responsibilities</p>
               </div>
               <div className="md:col-span-3">
                 <p className="text-neutral-800 dark:text-neutral-200">Lead the front-end and UI/UX design for a small business partnership platform</p>

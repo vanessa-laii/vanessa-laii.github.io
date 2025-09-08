@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import { HiMenu } from "react-icons/hi";
 import { cn } from "@/lib/utils";
@@ -7,6 +8,26 @@ import MobileMenu from './MobileMenu';
 
 export default function Navbar({className}:{className?:string}){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const router = useRouter();
+
+    const handleAnchorClick = (href: string) => {
+        if (window.location.pathname !== '/') {
+            // If not on home page, navigate to home first, then scroll
+            router.push('/');
+            setTimeout(() => {
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        } else {
+            // If on home page, just scroll
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     const socials = [
         {
@@ -63,20 +84,13 @@ export default function Navbar({className}:{className?:string}){
                     if (link.href.startsWith('#')) {
                       // Smooth scroll for anchor links
                       return (
-                        <a 
+                        <button 
                           key={index} 
-                          href={link.href}
                           className="text-gray-900 hover:text-purple-300 transition-colors duration-200 font-bold"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            const element = document.querySelector(link.href);
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' });
-                            }
-                          }}
+                          onClick={() => handleAnchorClick(link.href)}
                         >
                           {link.label}
-                        </a>
+                        </button>
                       );
                     } else {
                       // Regular Link navigation for external pages
