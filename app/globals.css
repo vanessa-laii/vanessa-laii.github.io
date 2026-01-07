@@ -91,3 +91,12 @@
         0 0 200px 130px #c026d3; 
   }
 
+  body.loading-active {
+    overflow: hidden;
+  }
+
+  body.loading-active > *:not(script):not([data-loading-screen]) {
+    opacity: 0;
+    pointer-events: none;
+  }
+

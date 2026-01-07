@@ -42,7 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           A brief overview of my journey
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-base md:text-lg max-w-lg">
-          Currently Software Engineering Intern at RBC on the Innovation & Technology DevOps Team. Looking to pursue summer 2026 internships as a Full Stack Developer.
+          Previous Software Engineering Intern at RBC on the Innovation & Technology DevOps Team. Looking to pursue summer 2026 internships as a Full Stack Developer.
         </p>
       </div>
 

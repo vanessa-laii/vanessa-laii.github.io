@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import { Timeline } from "@/components/ui/timeline";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import ProjectCard from './components/ProjectCard';
+import { projects } from './components/projectsData';
 
 const Page = () => {
   // About section data
@@ -236,18 +238,29 @@ const Page = () => {
         
         {/* Projects Section */}
         <div id="projects" className="pt-20 px-10">
-          <div className="max-w-7xl mx-auto p-5">
-            <h1 className="text-2xl lg:text-4xl font-bold text-left left-9 mt-8">
-              <span className="block underline underline-offset-8 decoration-green-200">Projects</span>
-            </h1>
-            {/* <p className="text-lg text-gray-700 text-center m-12">
-              Currently Software Engineering Intern at RBC. Previously Web Dev Lead for McMaster iGEM. Experienced with UI/UX design, Site Reliability Engineering and Dev Ops.
-            </p>
-            <AnimatedTestimonials testimonials={projectTestimonials} /> */}
-            <p className="text-lg text-gray-700 text-center m-12">
-              Section under construction...
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                My Projects .ೃ࿐
+              </h1>
+            </div>
+
+            {/* Projects Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
+              {projects.map((project, index) => (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  techStack={project.techStack}
+                  image={project.image}
+                  githubUrl={project.githubUrl}
+                  liveUrl={project.liveUrl}
+                  index={index}
+                />
+              ))}
+            </div>
+
+
         </div>
         
       </div>

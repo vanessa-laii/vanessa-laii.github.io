@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Arapey } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import LoadingScreen from "./(home)/components/LoadingScreen";
 
 const arapey = Arapey({
   subsets: ["latin"],
@@ -37,6 +38,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const hasVisited = sessionStorage.getItem('hasVisited');
+                  if (!hasVisited) {
+                    document.body.classList.add('loading-active');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={arapey.className}>
         <ThemeProvider
             attribute="class"
@@ -44,6 +61,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <LoadingScreen />
             {children}
         </ThemeProvider>
       </body>

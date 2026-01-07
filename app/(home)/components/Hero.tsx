@@ -14,27 +14,36 @@ export default function Hero() {
           text = "Hi, I’m Vanessa Lai."
         />
 
-        <p className="text-xl lg:text-xl text-black font-medium">
-          𖥔 Software Engineering Student @ McMaster University. 
+        <div className="space-y-2 text-xl lg:text-xl text-black font-medium">
+          <span className="relative inline-block group cursor-default">
+            <span className="relative z-10">𖥔 Software Engineering Student @ McMaster University.</span>
+            <span className="absolute left-0 top-0 bottom-0 bg-green-200/60 w-0 group-hover:w-full transition-all duration-500 ease-out -z-0"></span>
+          </span>
           <br />
-          𖥔 Experienced in Dev Ops, Full Stack Development, and UI/UX Design. 
+          <span className="relative inline-block group cursor-default">
+            <span className="relative z-10">𖥔 Experienced in Dev Ops, Full Stack Development, and UI/UX Design.</span>
+            <span className="absolute left-0 top-0 bottom-0 bg-pink-200/60 w-0 group-hover:w-full transition-all duration-500 ease-out -z-0"></span>
+          </span>
           <br />
-          𖥔 Passionate about creating seamless digital experiences through code and creativity.
-        </p>
+          <span className="relative inline-block group cursor-default">
+            <span className="relative z-10">𖥔 Avid matcha drinker and coffee lover, when I'm not coding, you can usually find me exploring cafes!.</span>
+            <span className="absolute left-0 top-0 bottom-0 bg-blue-200/60 w-0 group-hover:w-full transition-all duration-500 ease-out -z-0"></span>
+          </span>
+        </div>
         
 
         <div className="flex gap-5 items-center">
-          <div className="relative w-[275px] h-[150px] transform rotate-[-9deg] shadow-lg">
+          <div className="relative w-[275px] h-[90px] transform rotate-[-9deg] shadow-lg">
             <div className="absolute inset-0 bg-[#cafcb8bb] rounded-md p-4">
               <div className="h-full flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl font-medium">Navigating the world of code and design. 『••✎••』 <br/><br/>
-                    <Link
+                    {/* <Link
                       href={"https://drive.google.com/file/d/1u5rZD-lbzy0M4azHsZtnum2_2_ZMNMXH/view?usp=sharing"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className = "font-thin underline decoration-purple-200 text-md"
-                    >Click here for my Resume</Link>
+                    >Click here for my Resume</Link> */}
                   </h3>
                 </div>
               </div>
@@ -45,7 +54,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[#ecb8fcbb] rounded-md p-4">
               <div className="h-full flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-medium"> Currently Interning at: Royal Bank of Canada (RBC)   *:ꔫ:* </h3>
+                  <h3 className="text-xl font-medium"> Previous Intern at: Royal Bank of Canada (RBC)   *:ꔫ:* </h3>
                 </div>
               </div>
             </div>
