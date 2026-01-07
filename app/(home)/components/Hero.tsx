@@ -26,7 +26,7 @@ export default function Hero() {
           </span>
           <br />
           <span className="relative inline-block group cursor-default">
-            <span className="relative z-10">𖥔 Avid matcha drinker and coffee lover, when I'm not coding, you can usually find me exploring cafes!.</span>
+            <span className="relative z-10">𖥔 Avid matcha drinker and coffee lover, when I&apos;m not coding, you can usually find me exploring cafes!.</span>
             <span className="absolute left-0 top-0 bottom-0 bg-blue-200/60 w-0 group-hover:w-full transition-all duration-500 ease-out -z-0"></span>
           </span>
         </div>
