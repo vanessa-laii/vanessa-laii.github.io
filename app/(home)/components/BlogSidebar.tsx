@@ -29,8 +29,8 @@ const BlogSidebar = () => {
   ];
 
   return (
-    <div className="w-64 bg-gray-50 border-r border-gray-200 min-h-screen pt-32 px-6">
-      <div className="sticky top-32">
+    <div className="w-full md:w-64 bg-gray-50 border-b md:border-b-0 md:border-r border-gray-200 md:min-h-screen pt-24 md:pt-32 px-4 md:px-6">
+      <div className="md:sticky md:top-32">
         <h2 className="text-xl font-bold text-gray-900 mb-6">Blogs</h2>
         <nav className="space-y-2">
           {blogPosts.map((post) => (

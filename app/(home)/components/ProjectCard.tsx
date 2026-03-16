@@ -26,13 +26,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: 'easeOut' }}
       className="group relative bg-white rounded-xl shadow-lg hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 h-full flex flex-col"
     >
       {/* Image Container */}
-      <div className="relative h-32 overflow-hidden">
+      <div className="relative h-52 md:h-64 overflow-hidden">
         <Image
           src={image}
           alt={title}
@@ -51,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-5 h-40 overflow-hidden">
+        <p className="text-gray-800 text-lg leading-relaxed mb-5 h-40 overflow-hidden">
           {description}
         </p>
 

@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from "./components/Navbar";
 import Hero from './components/Hero';
 import Footer from './components/Footer';
@@ -219,33 +220,57 @@ const Page = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="max-w-full flex-1"> 
+      <div className="w-full flex-1"> 
         <Navbar />
         
         {/* Hero Section */}
-        <div id="home" className="pt-48 px-10">
-          <div className="max-w-7xl mx-auto p-5">
+        <div id="home" className="pt-32 sm:pt-40 lg:pt-48 px-4 sm:px-6 lg:px-10">
+          <motion.div
+            className="max-w-7xl mx-auto py-5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
             <Hero />
-          </div>
+          </motion.div>
         </div>
         
         {/* Experience Section */}
-        <div id="experience" className="pt-20 px-10">
-          <div className="max-w-7xl mx-auto p-5">
+        <div id="experience" className="pt-16 sm:pt-20 px-4 sm:px-6 lg:px-10">
+          <motion.div
+            className="max-w-7xl mx-auto py-5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
             <Timeline data={timelineData} />
-          </div>
+          </motion.div>
         </div>
         
         {/* Projects Section */}
-        <div id="projects" className="pt-20 px-10">
-            <div className="text-center mb-16">
+        <div id="projects" className="pt-16 sm:pt-20 px-4 sm:px-6 lg:px-10">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 My Projects .ೃ࿐
               </h1>
-            </div>
+            </motion.div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
               {projects.map((project, index) => (
                 <ProjectCard
                   key={project.id}
@@ -258,7 +283,7 @@ const Page = () => {
                   index={index}
                 />
               ))}
-            </div>
+            </motion.div>
 
 
         </div>
